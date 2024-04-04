@@ -1,0 +1,100 @@
+<div class="container py-2">
+
+    <% if(event!=null){%>
+
+
+        <div class="px-2 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold text-body-emphasis"><%-event.name %></h1>
+        </div>
+
+
+        <div class="row">
+            <div class="col-8 col-md-4">
+                <img src="/uploads/<%-event.image%>" class="img-fluid sticky-top" style="top :20px"
+                    alt="<%-event.name%>" loading="lazy">
+            </div>
+
+            <div class="col-12 col-md-8" >
+                <ol class="list-group ">
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class=fw-bold>
+                                <p class="text-primary">Description:-</p>
+                            </div>
+                            <%-event.description%>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class=fw-bold>
+                                <p class="text-primary">Host:-</p>
+                            </div>
+                            <%-event.host%>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class=fw-bold>
+                                <p class="text-primary">Date:-</p>
+                            </div>
+                            <%-event.date%>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class=fw-bold>
+                                <p class="text-primary">Time:-</p>
+                            </div>
+                            <%-event.time%>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class=fw-bold>
+                                <p class="text-primary">Contact:-</p>
+                            </div>
+                            <%-event.contact%>
+                        </div>
+
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class=fw-bold>
+                                <p class="text-primary">Venue:-</p>
+                            </div>
+                            <%-event.venue%>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class=fw-bold>
+                                <p class="text-primary">Fees:-</p>
+                            </div>
+                            <%-event.fees%>
+                        </div>
+
+                    </li>
+
+
+
+
+                    <div class="col-12">
+                        <a href="<%-event.link%>"><button type="submit"
+                                class="btn btn-primary w-100 btn-lg">Register</button></a>
+                    </div>
+
+                </ol>
+            </div>
+        </div>
+</div>
+
+<%} else {%>
+    <p>no recipe found </p>
+    <%}%>

@@ -1,0 +1,27 @@
+<div class="container px-4 py-2 my-5 text-center">
+
+    <h1 class="display-5 fw-bold text-body-emphasis">EVENTS</h1>
+
+
+</div>
+
+<div class="container py-4">
+    <div class="conatiner row row-cols-2 row-col-lg-4 g-6 g-lg-3 py-4 px-6 ">
+        <% if(typeof clubById!=="undefined" && clubById.length>0){ %>
+
+            <% clubById.forEach(function(event,index){ %>
+
+                <a href="/event/<%=event._id %>" class="col text-center category__link">
+                    <div class="category__img category__img--large shadow">
+                        <img src="/uploads/<%=event.image%>" alt="<%=event.name%>" loading="eager">
+
+                    </div>
+                    <div class="text-lg-center">
+                        <%=event.name%>
+                    </div>
+                </a>
+                <%})%>
+                    <% } %>
+    </div>
+
+</div>

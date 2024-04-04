@@ -1,0 +1,35 @@
+<!-- <h1 class="pb-4">Latest Events</h1> -->
+
+<!-- row row-cols-2 row-cols-lg-5 g-2 g-lg-3 -->
+
+<div class="container py-lg-5 ">
+    <div class="row row-cols-5 row-cols-lg-2 g-2 g-lg-4">
+        <% if(typeof event!=="undefined" && event.length> 0){ %>
+            <% event.forEach(function(event,index){ %>
+                <a href="/event/<%=event._id %>"
+                    class="category__link text-decoration-none col text-center text-dark-emphasis">
+                    <div class="category__img category__img--large shadow">
+                        <img src="/uploads/<%=event.image%>" alt="<%=event.name%>" loading="lazy">
+                    </div>
+
+
+                    <div class="pt-3">
+                        <%=event.name%>
+                    </div>
+
+
+
+                </a>
+                <%})%>
+                    <%} else {%>
+                        <p>No items found</p>
+
+                        <%}%>
+
+    </div>
+</div>
+
+
+<div class="container my-4">
+    <h2 class="pb-2 border-bottom"></h2>
+</div>

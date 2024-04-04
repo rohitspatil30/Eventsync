@@ -1,0 +1,125 @@
+<div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/images/submit3.jpg" alt="" width="327" height="327">
+    <h2 class="fw-bold">Submit For Approval</h2>
+    <p class="lead">Enter all the details below, and submit your event for approval where the admin will evaluate and
+        check wether to approve or not</p>
+</div>
+
+<div class="container my-4">
+    <h2 class="pb-2 border-bottom"></h2>
+</div>
+<div class="justify-content-center">
+
+    <% if(infoSubmitObj!="" ){ %>
+        <div class="col-8 cols-row-4 alert alert-success" role="alert">
+            <%= infoSubmitObj %>
+        </div>
+
+        <%}%>
+
+            <% if(infoErrorObj!="" ){ %>
+                <div class="col-8 cols-row-4 alert alert-danger" role="alert">
+                    <%= infoErrorObj[0].message %>
+                </div>
+
+                <%}%>
+
+
+                    <div class="container">
+                        <div class="col-12">
+                            <form action="/submit-event" enctype="multipart/form-data" method="post">
+                                <div class="row g-3">
+
+                                    <div class="px-5 row g-3">
+                                        <div class="col-12">
+                                            <label for="firstName" class="form-label">Event Name</label>
+                                            <input type="text" class="form-control" name="name" id="name" placeholder=""
+                                                value="" required>
+                                            <div class="invalid-feedback">
+                                                Valid first name is required.
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="description" class="form-label">Description</label>
+                                            <textarea name="description" id="description" cols="30" rows="4"
+                                                class="form-control" required></textarea>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="date" class="form-label">Date of event</label>
+                                            <input type="date" name="date" id="date" class="form-control" required>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="time" class="form-label">Time</label>
+                                            <input type="time" name="time" id="time" class="form-control" required>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="fees" class="form-label">Fees</label>
+                                            <input type="number" name="fees" id="fees" class="form-control" required>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="contact" class="form-label">Contact Details</label>
+                                            <input type="number" name="contact" id="contact" class="form-control"
+                                                required>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="venue" class="form-label">Venue of Event</label>
+                                            <input type="text" name="venue" id="venue" class="form-control" required>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="host" required>Select Hosting Club</label>
+
+                                            <select name="host" aria-label="host" class="form-select form-control"
+                                                required>
+                                                <option selected>Select Category</option>
+                                                <option value="Competitive Coding Club">Competitive Coding Club</option>
+                                                <option value="Association of Computer and Business Students">
+                                                    Association of
+                                                    Computer and
+                                                    Business Students</option>
+                                                <option value="TechHawks">TechHawks</option>
+                                                <option value="Professional Development Club">Professional Development
+                                                    Club
+                                                </option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="link" required>Link</label>
+                                            <input type="url" class="form-control" name="link" accept="link" required>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="image" required>Brochure Image</label>
+                                            <input type="file" class="form-control" name="image" accept="image/*"
+                                                required>
+                                        </div>
+
+
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary w-100 btn-lg">SUBMIT</button>
+                                        </div>
+
+
+
+                                        <div class="container my-4">
+                                            <h2 class="pb-2 border-bottom"></h2>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    </form>
+
+
+
+
+</div>

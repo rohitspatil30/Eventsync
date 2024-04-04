@@ -1,0 +1,23 @@
+<h1 class="pb-lg-5">
+    <pre>  <br><br> Search Results </pre>
+</h1>
+
+<div class="p-lg-5  row row-cols-2 row-cols-5 g-2 g-lg-3">
+    <% if(typeof event!=="undefined" && event.length> 0){ %>
+        <% event.forEach(function(event,index){ %>
+            <a href="/event/<%=event._id %>" class="col text-center category__link">
+                <div class="category__img category__img--large shadow">
+                    <img src="/uploads/<%=event.image%>" alt="<%=event.name%>" loading="lazy">
+
+                </div>
+                <div class="pt-1">
+                    <%=event.name%>
+                </div>
+            </a>
+            <%})%>
+                <%} else {%>
+                    <p>No items found</p>
+
+                    <%}%>
+
+</div>
